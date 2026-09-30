@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Students</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="app"><aside class="sidebar"><div class="logo">🎓 <span>ScholarTrack</span></div><nav>
+<a href="dashboard.html">📊 Dashboard</a><a class="active" href="students.html">👨‍🎓 Students</a><a href="scholarships.html">🎓 Scholarships</a><a href="requirements.html">📋 Requirements</a><a href="compliance.html">📚 Academic Compliance</a><a href="reports.html">📈 Reports</a></nav><button id="logoutBtn" class="logout">↪ Logout</button></aside>
+<main class="main"><header><div><h2>Student Management</h2><p>Add, search and manage scholarship students.</p></div></header>
+<section class="panel"><div class="panel-title"><h3>Student List</h3><button class="btn primary" id="addStudentBtn">+ Add Student</button></div>
+<input class="search" id="studentSearch" placeholder="Search by ID, name or course...">
+<div class="table-wrap"><table><thead><tr><th>Student ID</th><th>Full Name</th><th>Course</th><th>Year</th><th>Email</th><th>Status</th><th>Action</th></tr></thead><tbody id="studentTable"></tbody></table></div></section>
+</main></div>
+<div class="modal" id="studentModal"><div class="modal-box"><button class="close" id="closeModal">×</button><h3>Add Student</h3><form id="studentForm" class="form-grid">
+<input id="studentId" placeholder="Student ID" required><input id="fullName" placeholder="Full Name" required><input id="course" placeholder="Course" required><select id="yearLevel" required><option value="">Year Level</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option></select><input id="studentEmail" type="email" placeholder="Email" required><input id="contact" placeholder="Contact Number"><select id="studentStatus"><option>Active</option><option>Inactive</option></select><button class="btn primary" type="submit">Save Student</button></form></div></div>
+<script src="js/supabase.js"></script><script src="js/students.js"></script></body></html>
